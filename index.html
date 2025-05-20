@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxfiy Maktub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fbe9e7, #fce4ec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            width: 90%;
+            max-width: 650px;
+            border: 2px dashed #f48fb1;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+    
+        h2 {
+            color: #c2185b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        input[type="password"] {
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #f8bbd0;
+            border-radius: 10px;
+            outline: none;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+    
+        input[type="password"]:focus {
+            border-color: #ec407a;
+            box-shadow: 0 0 5px rgba(236, 64, 122, 0.4);
+        }
+    
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background: #ec407a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+    
+        button:hover {
+            background: #d81b60;
+        }
+    
+        #letter {
+            display: none;
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4e4e4e;
+            animation: fadeIn 1s ease-in-out;
+        }
+    
+        .italic {
+            font-style: italic;
+            text-align: right;
+            margin-top: 25px;
+            color: #ad1457;
+            font-weight: bold;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+    #container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="password"], button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #letter {
+        font-size: 15px;
+    }
+}
+
+    </style>
+    
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+        #letter {
+            display: none;
+            margin-top: 20px;
+        }
+        input[type="password"] {
+            padding: 8px;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 16px;
+            font-size: 16px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .italic {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style> -->
+</head>
+<body>
+<div id="container">
+    <h2>Maxfiy maktubni ochish uchun parolni kiriting:</h2>
+    <input type="password" id="password" placeholder="Parolni kiriting">
+    <button onclick="checkPassword()">Ochish</button>
+
+    <div id="letter">
+        <p>“Siz bilan ko‘rishishga menda hohish yo‘q,” deganingizni eshitdim. Bu so‘zlarni tushunaman va hurmat qilaman. Har bir inson o‘z tanloviga haqli. Lekin shunday paytlar bo‘ladiki, aynan bir qadam — bir qarash, bir suhbat — hayotimizda yangi sahifa ochadi. Shu sababli bu maktubni yozishga qaror qildim.</p>
+
+        <p>Men sizni ko‘rishga emas — tinglashga, tushunishga, bir inson sifatida tanishga taklif qilmoqchiman. Biz — ikki xil dunyo vakilimiza balki, lekin aynan shu farqlarga qiziqyapman. Siz nimalarga ishonasiz? Nimalarga kulasiz? Hayotga qanday nazar bilan qaraysiz? Men buni bilishni istayman. Balki bu siz uchun oddiy narsa tuyular, lekin men uchun — bu kashfiyotga teng.</p>
+
+        <p>Bir piyola qahva, sokin joy, samimiy suhbat. Hech qanday majburiyat yo‘q, faqat insoniy ochiqlik va o‘zaro hurmat.</p>
+
+        <p>Agar shunchaki bir uchrashuv, ikkalamizning dunyoqarashimizni boyitib, qalbimizda iliqlik qoldira olsa, bu allaqachon katta yutuq.</p>
+        <p>The most beautiful conversations begin not in words, but in mutual respect.
+            And maybe, that’s exactly what this is.</p>
+
+        <p class="italic">Tanishtirish emas, tushunish yetarli.</p>
+    </div>
+</div>
+
+<script>
+    function checkPassword() {
+        const password = document.getElementById("password").value;
+        if (password === "0928") {
+            document.getElementById("letter").style.display = "block";
+        } else {
+            alert("Parol noto‘g‘ri. Qaytadan urinib ko‘ring.");
+        }
+    }
+</script>
+</body>
+</html>
